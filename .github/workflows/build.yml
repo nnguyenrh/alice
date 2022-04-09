@@ -18,7 +18,7 @@ jobs:
 
       - name: build game
         run: |
-          go get github.com/nnguyenrh/alice
+          go get github.com/tmedwards/tweego
           export PATH=$PATH:$(go env GOPATH)/bin
           tweego -o dist/index.html passages src/
 
