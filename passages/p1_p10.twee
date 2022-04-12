@@ -1,4 +1,4 @@
-:: Page1 [kai aleki etc]
+:: Page1 [kai etc]
 
 The call reached Nuavana agricultural outpost just as it stirred to life. Somewhere in the glacial seas, a ship had began to sunk. The ship had no name, no identification number, because this is Hyperion and maritime laws are quaint things no one ever cared about. Ships, as a whole, served very little purpose in most part of the planet, as the seas are treacherous and far apart. Aleki guessed the SOS signal came from one of two things. A scientific research vessel, or a survey ship, looking for something that might just be worth some credit.
 
@@ -14,11 +14,11 @@ So he called for her, and found, to his surprise, that he was relieved to know s
 
 'That woman' he sighed and shook his head. 'How dare she win me over so easily?'
 
-There was little time to be annoyed, nor to wait around, so he leapt up to the ship, preparing it for departure. Let it not be said that the Kaha'i has no kindness.
+<<type 30ms>>There was little time to be annoyed, nor to wait around, so he leapt up to the ship, preparing it for departure. Let it not be said that the Kaha'i has no kindness.<</type>>
 
-[[Menu]] [[🠖|Page2]]
+<div style="text-align:center;">[[Menu]] [[🠖|Page2]]</div>
 
-:: Page2 [sas moran]
+:: Page2 [sas]
 
 By now, nearly a year after her arrival in Nuavana, Moran is already used to be woken up from her sleep for any kind of emergency—but living in her own pace was one of the hardest things she had to unlearn. In Nuavana, no individuals could afford the luxury to live how they want. Their sleep can never be too deep; and in wakefulness, their lives are always busy and fluid with all sorts of commitments and crises; and everyone has to move in the same set pace. Aleki keeps everyone on a harsh and rigid schedule, and for a good reason. In Hyperion, Moran learned that in order to survive, people have to be harsher than the environment they live in, lest they will be defeated.
 
@@ -31,7 +31,7 @@ As Moran is standing on the dock ready to get on the ship, she notices someone i
 <strong>“Aleki, Yingluo is here. Do you have an appointment with him today?”</strong>
 
  
-:: Page3 [alice yingluo]
+:: Page3 [alice]
 
 It is the soft chime on his phone that reminds Yingluo that he is late for the scheduled plane to Nuavana.
 
@@ -57,7 +57,7 @@ Yingluo groans inwardly. I’m not paid enough for this. He parks his hovercar, 
 
 “Hey! Need help?”
 
-:: Page4 [kai aleki]
+:: Page4 [kai]
 
 The lone figure of Yingluo Lu always stood out in bleak Nuavana, where there were few men as slight and pale as he was. Aleki had gotten used to seeing the man around Nuavana. If he was lucky, the young man would be here for his cousin, Nikau, if he wasn't, then Yingluo would have somehow managed to find a way to jam even the most reliable of machines.
 
@@ -83,7 +83,7 @@ The comms fizzled out, signal lost in the storm. It was time to leave.
 
 "You sit tight somewhere." he said to Yingluo before offering a hand to pull Moran up. "I'll take care of your problem after I get back."
 
-:: Page5 [sas moran]
+:: Page5 [sas]
 
 In contrast to Aleki, Moran greets Yingluo with a cheerful, but knowing smile. Some time ago, Moran took notice that there is something going on between Nikau, one of Aleki’s man, and Yingluo. It’s not a match that she would have imagined by herself; though the exact same thing could be said, and perhaps has already been said, about her and Aleki. She remembers an off-hand comment Ming made about Aleki the first time they had seen him at a party. The comment itself wasn’t mean-spirited; but it was clear that Aleki is not Ming’s type.
 
@@ -97,7 +97,7 @@ The transmissions from the ship, unclear but undoubtedly dire, finally snap Mora
 
 <strong>“Dark blue? Red one? What is this creature that they’re talking about?”</strong>
 
-:: Page6 [alice yingluo]
+:: Page6 [alice]
 
 No; that won’t do. He can’t be left behind when Moran Caishen is possibly going on a perilous rescue mission that involves a sinking ship and...whatever else is involved. If anything happens to her while he is on his routine visit, it’ll be a stain on his professional reputation.
 Yingluo eyes Aleki’s cousin turning up behind him, then, answering a radio comm that he faintly hears from where he stands on the dock. Their eyes meet for a brief second before the older man turns his back, very pointedly trying not to look at him. It earns a scoff out of Yingluo: pathetic, for a man more than ten years his senior to behave like a teenager with a crush.

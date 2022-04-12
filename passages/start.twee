@@ -9,64 +9,28 @@
 :: StoryTitle 
 rescue mission
 
-:: Start
+:: Start [etc]
 <<nobr>>
-<<script>>
-    function pagecounter(a, b) {
-        if(a != null) {
-            if(b == "previous") {
-                return "Page" + String(a - 1);
-            } else if(b == "next") {
-                return "Page" + String(a + 1);
-            } else {
-                return "";
-            }
-        } else {
-            return "";
-        }
-    }
-
-    setup.previouspage = function() {
-        const passages = State.passages;
-        const current_passage = passages[passages.length - 1];
-        if(passages.length < 2 || current_passage.substr(0,4) != "Page") {
-            return "";
-        } else {
-            const current_passage_int = parseInt(current_passage.substr(4, passages.length - 1));
-            const previous_passage_int = current_passage_int - 1;
-            return pagecounter(current_passage_int,"previous");
-        }
-    };
-
-    setup.nextpage = function() {
-        const passages = State.passages;
-        const current_passage = passages[passages.length - 1];
-        if(passages.length < 2 || current_passage.substr(0,4) != "Page") {
-            return "";
-        } else {
-            const current_passage_int = parseInt(current_passage.substr(4, passages.length - 1));
-            const next_passage_int = current_passage_int + 1;
-            return pagecounter(current_passage_int,"next");
-        }
-    };
-
-<</script>>
-
     <<widget "pagination">> 
     <<set $previouslink to setup.previouspage()>>
     <<set $nextlink to setup.nextpage()>>
-        [[Previous|$previouslink]] [[Menu]] [[Next|$nextlink]]
+        <div style="text-align:center;">[[⭠|$previouslink]] [[Menu]] [[🠖|$nextlink]]</div>
     <</widget>>
 <</nobr>>
-rescue mission,
-is a thread saved from natura, featuring sas, alice, and kai. (names should turn into the character on-click.)
+<<type 210ms>><h1>rescue
+mission</h1><</type>>
+is a thread saved from natura, featuring <<linkreplace "sas">>==sas== moran<</linkreplace>>, <<linkreplace "alice">>==alice== yingluo<</linkreplace>>, and <<linkreplace "kai">>==kai== aleki<</linkreplace>>.
 
-[[about|About]] [[birthday card|Card]] [[read|Page1]]
+[[about|About]]
+[[birthday card|Card]]
+[[read|Page1]]
 
 :: PassageFooter 
+<<if not tags().includes('etc')>>
 <<pagination>>
+<</if>>
 
-:: About 
+:: About [etc]
 Hi Alice!
 First of all, happy birthday! For now I won't say much else because that's going to be in your [[birthday card|Card]] ;)
 I don't really know what to call this gift. More accurately, it is a <b>twine game</b>, which is an interactive fiction game template. 
@@ -77,11 +41,14 @@ I hope you enjoy!
 
 [[Return?|Start]]
 
-:: Card 
+:: Card [etc]
 You'll be able to read your special birthday card once you've passed through the thread. :) 
 
 [[Return?|Start]]
 
+:: Menu [etc]
+You can choose to <<link "save or load">><<run UI.saves()>><</link>> your progress here.
 
+<<back "Return to page?">>
 
 
