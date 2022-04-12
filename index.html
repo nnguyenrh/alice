@@ -98,7 +98,99 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://2715324B-29B8-4C98-BB49-578A812A0795// --><tw-storydata name="rescue mission" startnode="10" creator="Tweego" creator-version="2.1.1" ifid="2715324B-29B8-4C98-BB49-578A812A0795" zoom="1" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Page1" tags="kai,aleki" position="100,100" size="100,100">The call reached Nuavana agricultural outpost just as it stirred to life. Somewhere in the glacial seas, a ship had began to sunk. The ship had no name, no identification number, because this is Hyperion and maritime laws are quaint things no one ever cared about. Ships, as a whole, served very little purpose in most part of the planet, as the seas are treacherous and far apart. Aleki guessed the SOS signal came from one of two things. A scientific research vessel, or a survey ship, looking for something that might just be worth some credit.
+	<!-- UUID://2715324B-29B8-4C98-BB49-578A812A0795// --><tw-storydata name="rescue mission" startnode="10" creator="Tweego" creator-version="2.1.1" ifid="2715324B-29B8-4C98-BB49-578A812A0795" zoom="1" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "paginate.js" */
+function pagecounter(a, b) {
+    if(a != null) {
+        if(b == "previous") {
+            return "Page" + String(a - 1);
+        } else if(b == "next") {
+            return "Page" + String(a + 1);
+        } else {
+            return "";
+        }
+    } else {
+        return "";
+    }
+}
+
+setup.previouspage = function() {
+    const passages = State.passages;
+    const current_passage = passages[passages.length - 1];
+    if(passages.length < 2 || current_passage.substr(0,4) != "Page") {
+        return "";
+    } else {
+        const current_passage_int = parseInt(current_passage.substr(4, passages.length - 1));
+        const previous_passage_int = current_passage_int - 1;
+        return pagecounter(current_passage_int,"previous");
+    }
+};
+
+setup.nextpage = function() {
+    const passages = State.passages;
+    const current_passage = passages[passages.length - 1];
+    if(passages.length < 2 || current_passage.substr(0,4) != "Page") {
+        return "";
+    } else {
+        const current_passage_int = parseInt(current_passage.substr(4, passages.length - 1));
+        const next_passage_int = current_passage_int + 1;
+        return pagecounter(current_passage_int,"next");
+    }
+};
+/* twine-user-script #2: "temp.js" */
+// fading macro set, by chapel; for SugarCube 2
+// version 1.1.0
+// see the documentation: https://github.com/ChapelR/custom-macros-for-sugarcube-2#fading-macros
+
+// <<fadein>> macro
+Macro.add('fadein', {
+    tags : null,
+ handler : function () {
+
+     var $wrapper = $(document.createElement('span'));
+     var content  = this.payload[0].contents, time, delay;
+
+     if (this.args.length === 0) {
+         return this.error('no arguments given');
+     }
+     
+     time  = Util.fromCssTime(this.args[0]);
+     delay = (this.args.length > 1) ?  Util.fromCssTime(this.args[1]) : 0;
+
+     $wrapper
+         .wiki(content)
+         .addClass('macro-' + this.name)
+         .appendTo(this.output)
+         .hide()
+         .delay(delay)
+         .fadeIn(time);
+
+ }
+});
+
+// <<fadeout>> macro
+Macro.add('fadeout', {
+    tags : null,
+ handler : function () {
+
+     var $wrapper = $(document.createElement('span'));
+     var content  = this.payload[0].contents, time, delay;
+
+     if (this.args.length === 0) {
+         return this.error('no arguments given');
+     }
+     
+     time  = Util.fromCssTime(this.args[0]);
+     delay = (this.args.length > 1) ?  Util.fromCssTime(this.args[1]) : 0;
+
+     $wrapper
+         .wiki(content)
+         .addClass('macro-' + this.name)
+         .appendTo(this.output)
+         .delay(delay)
+         .fadeOut(time);
+
+ }
+});</script><tw-passagedata pid="1" name="Page1" tags="kai aleki etc" position="100,100" size="100,100">The call reached Nuavana agricultural outpost just as it stirred to life. Somewhere in the glacial seas, a ship had began to sunk. The ship had no name, no identification number, because this is Hyperion and maritime laws are quaint things no one ever cared about. Ships, as a whole, served very little purpose in most part of the planet, as the seas are treacherous and far apart. Aleki guessed the SOS signal came from one of two things. A scientific research vessel, or a survey ship, looking for something that might just be worth some credit.
 
 It was stupid. The glacial seas is a cruel and petty god, easily roused to violent storms at a moment&#39;s notice. The locals know that nothing good comes out of sailing the glacial seas, but there&#39;s always outsiders who think they know better.
 
@@ -114,7 +206,7 @@ So he called for her, and found, to his surprise, that he was relieved to know s
 
 There was little time to be annoyed, nor to wait around, so he leapt up to the ship, preparing it for departure. Let it not be said that the Kaha&#39;i has no kindness.
 
-[[🠖|Page2]]</tw-passagedata><tw-passagedata pid="2" name="Page2" tags="sas,moran" position="225,100" size="100,100">By now, nearly a year after her arrival in Nuavana, Moran is already used to be woken up from her sleep for any kind of emergency—but living in her own pace was one of the hardest things she had to unlearn. In Nuavana, no individuals could afford the luxury to live how they want. Their sleep can never be too deep; and in wakefulness, their lives are always busy and fluid with all sorts of commitments and crises; and everyone has to move in the same set pace. Aleki keeps everyone on a harsh and rigid schedule, and for a good reason. In Hyperion, Moran learned that in order to survive, people have to be harsher than the environment they live in, lest they will be defeated.
+[[Menu]] [[🠖|Page2]]</tw-passagedata><tw-passagedata pid="2" name="Page2" tags="sas moran" position="225,100" size="100,100">By now, nearly a year after her arrival in Nuavana, Moran is already used to be woken up from her sleep for any kind of emergency—but living in her own pace was one of the hardest things she had to unlearn. In Nuavana, no individuals could afford the luxury to live how they want. Their sleep can never be too deep; and in wakefulness, their lives are always busy and fluid with all sorts of commitments and crises; and everyone has to move in the same set pace. Aleki keeps everyone on a harsh and rigid schedule, and for a good reason. In Hyperion, Moran learned that in order to survive, people have to be harsher than the environment they live in, lest they will be defeated.
 
 Moran didn’t realize how slow she had been living her life until she came to stay with Aleki. The first months of her fastening her pace, stumbling and falling as she was figuring things out were hard that she cried to sleep almost every night. But soon she found out that crying is also a luxurious past time in Nuavana. If she lost a night sleep from crying, she would then have to endure a fast-paced day with heavy eyes and a headache. Working hard with an aching body was not worth a few drops of tears, and slowly Moran stopped crying on her own. Who knew she could just sleep her sadness off, and woke up just fine the next day?
 
@@ -122,10 +214,7 @@ Even after a year, Aleki Kaha’i is no more gentle than he was to her before, e
 
 As Moran is standing on the dock ready to get on the ship, she notices someone in the distance whom she immediately knows is not from Nuavana. The Kaha’i and people who live in Nuavana have different builds compared to both her and Yingluo, and so his presence always stands out, the same way it is easy for people to single her out in Nuavana.
 
-&lt;strong&gt;“Aleki, Yingluo is here. Do you have an appointment with him today?”&lt;/strong&gt;
-
-
-[[⭠|Page1]] [[Save/Load|]] [[🠖|Page3]]</tw-passagedata><tw-passagedata pid="3" name="Page3" tags="alice,yingluo" position="350,100" size="100,100">It is the soft chime on his phone that reminds Yingluo that he is late for the scheduled plane to Nuavana.
+&lt;strong&gt;“Aleki, Yingluo is here. Do you have an appointment with him today?”&lt;/strong&gt;</tw-passagedata><tw-passagedata pid="3" name="Page3" tags="alice yingluo" position="350,100" size="100,100">It is the soft chime on his phone that reminds Yingluo that he is late for the scheduled plane to Nuavana.
 
 Yingluo has been lucky thus far that most of his bimonthly report on Moran Caishen’s activity has always coincided with her time in the Avernus clinic. It doesn’t take a lot of excuses to bump into her—I just happened to be in the area, the lie slides smoothly out of his mouth. I was getting some pastries from a nearby patisserie that just opened, here, have some. But whenever Moran is in Nuavana, he has to wring his brain for a sufficient reason for a visit. It usually involves him finding all manner of creative ways to jam the weapons he has bought from Aleki—and he enjoys seeing the stoic man ruffled and cursing, although it is his reputation as a weapon owner that is put at stake.
 
@@ -147,9 +236,7 @@ He sees the fleet gathered in front of the gate of Nuavana after another half-ho
 
 Yingluo groans inwardly. I’m not paid enough for this. He parks his hovercar, regardless, climbs out of it and half-jogs to the Nuavana fleet. Once he is close enough to visual and auditory range, he pushes his goggles up, and tugs his mask down. Moran Caishen is already looking his way.
 
-“Hey! Need help?”
-
-[[⭠|Page2]] [[🠖|Page4]]</tw-passagedata><tw-passagedata pid="4" name="Page4" tags="kai,aleki" position="475,100" size="100,100">The lone figure of Yingluo Lu always stood out in bleak Nuavana, where there were few men as slight and pale as he was. Aleki had gotten used to seeing the man around Nuavana. If he was lucky, the young man would be here for his cousin, Nikau, if he wasn&#39;t, then Yingluo would have somehow managed to find a way to jam even the most reliable of machines.
+“Hey! Need help?”</tw-passagedata><tw-passagedata pid="4" name="Page4" tags="kai aleki" position="475,100" size="100,100">The lone figure of Yingluo Lu always stood out in bleak Nuavana, where there were few men as slight and pale as he was. Aleki had gotten used to seeing the man around Nuavana. If he was lucky, the young man would be here for his cousin, Nikau, if he wasn&#39;t, then Yingluo would have somehow managed to find a way to jam even the most reliable of machines.
 
 &quot;What?!&quot; Aleki sighed from atop his vessel.
 
@@ -171,9 +258,7 @@ Nikau, who suddenly appeared on deck, came up to them, trying hard not to be dis
 
 The comms fizzled out, signal lost in the storm. It was time to leave.
 
-&quot;You sit tight somewhere.&quot; he said to Yingluo before offering a hand to pull Moran up. &quot;I&#39;ll take care of your problem after I get back.&quot;
-
-[[⭠|Page3]] [[🠖|Page5]]</tw-passagedata><tw-passagedata pid="5" name="Page5" tags="sas,moran" position="600,100" size="100,100">In contrast to Aleki, Moran greets Yingluo with a cheerful, but knowing smile. Some time ago, Moran took notice that there is something going on between Nikau, one of Aleki’s man, and Yingluo. It’s not a match that she would have imagined by herself; though the exact same thing could be said, and perhaps has already been said, about her and Aleki. She remembers an off-hand comment Ming made about Aleki the first time they had seen him at a party. The comment itself wasn’t mean-spirited; but it was clear that Aleki is not Ming’s type.
+&quot;You sit tight somewhere.&quot; he said to Yingluo before offering a hand to pull Moran up. &quot;I&#39;ll take care of your problem after I get back.&quot;</tw-passagedata><tw-passagedata pid="5" name="Page5" tags="sas moran" position="600,100" size="100,100">In contrast to Aleki, Moran greets Yingluo with a cheerful, but knowing smile. Some time ago, Moran took notice that there is something going on between Nikau, one of Aleki’s man, and Yingluo. It’s not a match that she would have imagined by herself; though the exact same thing could be said, and perhaps has already been said, about her and Aleki. She remembers an off-hand comment Ming made about Aleki the first time they had seen him at a party. The comment itself wasn’t mean-spirited; but it was clear that Aleki is not Ming’s type.
 
 Nor would Ming, or for that matter any Polaris woman with their expensive dresses and their silver spoons, be Aleki’s type—though thinking about this makes Moran a little worried. She, though a clear outlier compared to her Polaris peers who grew up in Gaia, Erebus and Corinth, was also not someone Aleki would look twice—and perhaps he would never have looked at her at all if she hadn’t come here to Nuavana, shamelessly chasing after him.
 
@@ -183,19 +268,63 @@ As Moran watches Nikau—who normally is as calm and collected as Aleki—resolu
 
 The transmissions from the ship, unclear but undoubtedly dire, finally snap Moran out of her thoughts—also the wrong ones to have in here and now. She is lucky no one in this world can read minds. Their predicament, as stated by the captain, makes Moran feel nervous. After she takes Aleki’s hand and thanks him for his help, Moran can’t help but ask out of clear apprehension.
 
-&lt;strong&gt;“Dark blue? Red one? What is this creature that they’re talking about?”&lt;/strong&gt;
-
-[[⭠|Page4]] [[🠖|Page6]]</tw-passagedata><tw-passagedata pid="6" name="Page6" tags="alice,yingluo" position="725,100" size="100,100">No; that won’t do. He can’t be left behind when Moran Caishen is possibly going on a perilous rescue mission that involves a sinking ship and...whatever else is involved. If anything happens to her while he is on his routine visit, it’ll be a stain on his professional reputation.
+&lt;strong&gt;“Dark blue? Red one? What is this creature that they’re talking about?”&lt;/strong&gt;</tw-passagedata><tw-passagedata pid="6" name="Page6" tags="alice yingluo" position="725,100" size="100,100">No; that won’t do. He can’t be left behind when Moran Caishen is possibly going on a perilous rescue mission that involves a sinking ship and...whatever else is involved. If anything happens to her while he is on his routine visit, it’ll be a stain on his professional reputation.
 Yingluo eyes Aleki’s cousin turning up behind him, then, answering a radio comm that he faintly hears from where he stands on the dock. Their eyes meet for a brief second before the older man turns his back, very pointedly trying not to look at him. It earns a scoff out of Yingluo: pathetic, for a man more than ten years his senior to behave like a teenager with a crush.
 
 It doesn’t matter, so long as the man is useful to him. “Who says I’m here with a jammed gun?” he shouts, jogging back to the hovercar to grab his backpack and one of the bottles. There is no one to help him climb aboard the way Aleki does to Moran—not that it will be a problem. With the bottle secure in his backpack, he jumps and grabs at the ladder hanging off the side of the vessel and climbs aboard easily, barely missing a breath. Shamelessly makes a beeline to Aleki and Nikau’s side, dangling the mouth of the bottle on the tips of his fingers. “Good morning, Aleki. This was meant to be a social visit. But—” he clicks his tongue and turns away, facing Moran instead. And then, because Yingluo is petty and not-so-secretly takes pleasure in yanking people’s chain around, he pointedly ignores Nikau’s presence behind him as he says, “Not even a hello. I guess I’ll share this bottle with the good doctor instead when the rescue mission is over.”
 
-It is, after all, paid by her brother’s money. Who, Yingluo thinks, might have a conniption when he hears what his little sister is up to, out here in the glacial seas. Yingluo beams a dimpled smile at her; “Hello, Moran,” he greets her warmly, then turns back around to face Aleki. “May I help? I can take orders and I can take care of myself out there. I’ve been trapped in a hovercar for over five hours—if I have to sit still somewhere I’ll go insane.”
+It is, after all, paid by her brother’s money. Who, Yingluo thinks, might have a conniption when he hears what his little sister is up to, out here in the glacial seas. Yingluo beams a dimpled smile at her; “Hello, Moran,” he greets her warmly, then turns back around to face Aleki. “May I help? I can take orders and I can take care of myself out there. I’ve been trapped in a hovercar for over five hours—if I have to sit still somewhere I’ll go insane.”</tw-passagedata><tw-passagedata pid="7" name="Page7" tags="" position="850,100" size="100,100"></tw-passagedata><tw-passagedata pid="8" name="Page8" tags="" position="975,100" size="100,100"></tw-passagedata><tw-passagedata pid="9" name="Page9" tags="" position="1100,100" size="100,100"></tw-passagedata><tw-passagedata pid="10" name="Start" tags="" position="1225,100" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;script&gt;&gt;
+    function pagecounter(a, b) {
+        if(a != null) {
+            if(b == &quot;previous&quot;) {
+                return &quot;Page&quot; + String(a - 1);
+            } else if(b == &quot;next&quot;) {
+                return &quot;Page&quot; + String(a + 1);
+            } else {
+                return &quot;&quot;;
+            }
+        } else {
+            return &quot;&quot;;
+        }
+    }
 
-[[⭠|Page5]] [[🠖|Page7]]</tw-passagedata><tw-passagedata pid="7" name="Page7" tags="" position="850,100" size="100,100">[[⭠|Page6]] [[🠖|Page8]]</tw-passagedata><tw-passagedata pid="8" name="Page8" tags="" position="975,100" size="100,100">[[⭠|Page7]] [[🠖|Page9]]</tw-passagedata><tw-passagedata pid="9" name="Page9" tags="" position="1100,100" size="100,100">[[⭠|Page8]] [[🠖|Page10]]</tw-passagedata><tw-passagedata pid="10" name="Start" tags="" position="1225,100" size="100,100">rescue mission,
+    setup.previouspage = function() {
+        const passages = State.passages;
+        const current_passage = passages[passages.length - 1];
+        if(passages.length &lt; 2 || current_passage.substr(0,4) != &quot;Page&quot;) {
+            return &quot;&quot;;
+        } else {
+            const current_passage_int = parseInt(current_passage.substr(4, passages.length - 1));
+            const previous_passage_int = current_passage_int - 1;
+            return pagecounter(current_passage_int,&quot;previous&quot;);
+        }
+    };
+
+    setup.nextpage = function() {
+        const passages = State.passages;
+        const current_passage = passages[passages.length - 1];
+        if(passages.length &lt; 2 || current_passage.substr(0,4) != &quot;Page&quot;) {
+            return &quot;&quot;;
+        } else {
+            const current_passage_int = parseInt(current_passage.substr(4, passages.length - 1));
+            const next_passage_int = current_passage_int + 1;
+            return pagecounter(current_passage_int,&quot;next&quot;);
+        }
+    };
+
+&lt;&lt;/script&gt;&gt;
+
+    &lt;&lt;widget &quot;pagination&quot;&gt;&gt; 
+    &lt;&lt;set $previouslink to setup.previouspage()&gt;&gt;
+    &lt;&lt;set $nextlink to setup.nextpage()&gt;&gt;
+        [[Previous|$previouslink]] [[Menu]] [[Next|$nextlink]]
+    &lt;&lt;/widget&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+rescue mission,
 is a thread saved from natura, featuring sas, alice, and kai. (names should turn into the character on-click.)
 
-[[about|About]] [[birthday card|Card]] [[read|Page1]]</tw-passagedata><tw-passagedata pid="11" name="About" tags="" position="100,225" size="100,100">Hi Alice!
+[[about|About]] [[birthday card|Card]] [[read|Page1]]</tw-passagedata><tw-passagedata pid="11" name="PassageFooter" tags="" position="100,225" size="100,100">&lt;&lt;pagination&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="About" tags="" position="225,225" size="100,100">Hi Alice!
 First of all, happy birthday! For now I won&#39;t say much else because that&#39;s going to be in your [[birthday card|Card]] ;)
 I don&#39;t really know what to call this gift. More accurately, it is a &lt;b&gt;twine game&lt;/b&gt;, which is an interactive fiction game template. 
 It&#39;s not really a game. It&#39;s more like a visual novel, and the novel is composed of the rescue mission natura thread you, Sas, and Kai wrote together.
@@ -203,7 +332,7 @@ I wanted you to have a place where you could revisit one of your favorite pieces
 
 I hope you enjoy! 
 
-[[Return?|Start]]</tw-passagedata><tw-passagedata pid="12" name="Card" tags="" position="225,225" size="100,100">You&#39;ll be able to read your special birthday card once you&#39;ve passed through the thread. :) 
+[[Return?|Start]]</tw-passagedata><tw-passagedata pid="13" name="Card" tags="" position="350,225" size="100,100">You&#39;ll be able to read your special birthday card once you&#39;ve passed through the thread. :) 
 
 [[Return?|Start]]</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
