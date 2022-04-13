@@ -32,6 +32,10 @@ h1 {
 
 }
 
+h2 {
+    letter-spacing: 0.20em;
+}
+  
 /* h1:nth-child(1) {
     color: #d6466a;
 } */

@@ -9,6 +9,9 @@
 :: StoryTitle 
 rescue mission
 
+:: StoryInit [etc]
+<<set $finished to false>>
+
 :: Start [etc]
 <<nobr>>
     <<widget "pagination">> 
@@ -25,8 +28,11 @@ is a thread saved from natura, featuring <<linkreplace "sas">>==sas== moran<</li
 [[birthday card|Card]]
 [[read|Page1]]
 
+:: PassageHeader
+<<if not tags().includes('etc')>><<type 300ms>><h2><<print tags()[0]>>:</h2><</type>><</if>>
+
 :: PassageFooter 
-<<if not tags().includes('etc')>>
+<<if not tags().includes('etc') and not tags().includes('exclude')>>
 <<pagination>>
 <</if>>
 
