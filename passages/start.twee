@@ -25,7 +25,7 @@ mission</h1><</type>>
 is a thread saved from natura, featuring <<linkreplace "sas">>==sas== moran<</linkreplace>>, <<linkreplace "alice">>==alice== yingluo<</linkreplace>>, and <<linkreplace "kai">>==kai== aleki<</linkreplace>>.
 
 [[about|About]]
-[[birthday card|Card]]
+[[card|Card]]
 [[read|Page1]]
 
 :: PassageHeader
@@ -38,9 +38,12 @@ is a thread saved from natura, featuring <<linkreplace "sas">>==sas== moran<</li
 
 :: About [etc]
 Hi Alice!
-First of all, happy birthday! For now I won't say much else because that's going to be in your [[birthday card|Card]] ;)
+First of all, long time no see! For now I won't say much else because that's going to be in your [[birthday card|Card]] ;)
+
 I don't really know what to call this gift. More accurately, it is a <b>twine game</b>, which is an interactive fiction game template. 
+
 It's not really a game. It's more like a visual novel, and the novel is composed of the rescue mission natura thread you, Sas, and Kai wrote together.
+
 I wanted you to have a place where you could revisit one of your favorite pieces of writing in an aesthetically appealing and beautiful way. :) 
 
 I hope you enjoy! 
@@ -48,7 +51,32 @@ I hope you enjoy!
 [[Return?|Start]]
 
 :: Card [etc]
-You'll be able to read your special birthday card once you've passed through the thread. :) 
+<<if $finished is false>>You'll be able to read your special birthday card once you've passed through the thread. :)<<else>>
+Alice,
+
+I hope you've been well!
+From Sas, I have heard that this year has not been a kind one to you. I hate that so much, and I wish I could take that all away. 
+
+When Kai reached out to me a few weeks ago and discussed potential gifts to come up with, I laid down on my bed and thought, over and over, what kind of gift was I going to give to you and Sas? 
+
+Sas has shared with me some of the gifts you've given her before. I thought that was incredibly novel, and really intimate, and gentle. I'm still taken aback by the fact that you gifted her perfumes and relevant fragrances that reminded you of both of you guys's characters, and how that was deeply resonant with her. Apparently, the both of you associate scent with strong emotions and memories...the way that it reached a common chord amazes me, even right at this very moment as I remember this. 
+
+Now, let's be real here, I don't know you as well as I know Sas, but I knew that your presents had to match in some way, or paired together. If there was anything I could glean from that specific memory, it was that. And I did some math (my flavor of math, not real math) and figured that I would gift you both something a little unconventional, but played somewhat to my strengths. 
+
+So I made a piece of writing from each of you into a Twine game. :) It wasn't a completely arbitrary thing. I had actually been sort of forced to write one for my brother, Derek, to help with a school assignment, and I actually was able to create an environment on my computer that would allow for high-efficiency...Twine coding. LOL. It was a very specific niche, but here we are. 
+
+I'm really used to making gifts like drawing pieces, or writing things, and giving them to people--that's how I am with a few friends that I exchange gifts with. But I felt that that would be unfitting for you both. Instead, I wanted to repackage some of your fondest memories, and give them a place for you to revisit in a unique way. 
+
+I didn't really explain it in detail with Kai. Not because I was trying to hide it from him, but because I think I got too self-absorbed in the idea that I forgot. Each game's experience is set up and designed in a way that I thought would suit your tastes. I used serif fonts on your game, because I remember that that's what you often tended towards. And since this was written on Natura, I tried to give it that stock science-fiction vibe with some monospace headers, and a dark background to contrast with Sas's light background on her twine game. 
+
+A match, but not necessarily two carbon copies of each other.
+
+Anyway. I hope that you enjoyed it. :) Know that I made both of these games with the two of you in mind. 
+
+I hope you two have a wonderful weekend!
+
+- Nhi
+<</if>>
 
 [[Return?|Start]]
 
