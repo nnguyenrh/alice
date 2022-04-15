@@ -38,7 +38,7 @@ is a thread saved from natura, featuring <<linkreplace "sas">>==sas== moran<</li
 
 :: About [etc]
 Hi Alice!
-First of all, long time no see! For now I won't say much else because that's going to be in your [[birthday card|Card]] ;)
+First of all, long time no see! For now I won't say much else because that's going to be in your [[card|Card]] ;)
 
 I don't really know what to call this gift. More accurately, it is a <b>twine game</b>, which is an interactive fiction game template. 
 
@@ -51,7 +51,7 @@ I hope you enjoy!
 [[Return?|Start]]
 
 :: Card [etc]
-<<if $finished is false>>You'll be able to read your special birthday card once you've passed through the thread. :)<<else>>
+<<if $finished is false>>You'll be able to read your special card once you've passed through the thread. :)<<else>>
 Alice,
 
 I hope you've been well!
